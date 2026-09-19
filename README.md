@@ -50,6 +50,20 @@ if response.statusCode == 401 {
 }
 ```
 
+## What your server has to expose
+
+Two endpoints under the `baseURL` you pass in. Any server can implement them —
+[app-attest-gate](https://github.com/Staberman/app-attest-gate) does, but it is
+not required.
+
+| | Request | Response |
+|---|---|---|
+| `POST {baseURL}/challenge` | empty | `{ "challenge": "<string>" }` |
+| `POST {baseURL}/register` | `{ "keyId", "challenge", "attestation" }` | any 2xx |
+
+`attestation` is base64. Anything outside 200–299 is read as
+`.registrationRejected`.
+
 ## What it handles that a first draft usually does not
 
 **Concurrent registration collapses into one.** Two calls racing on a fresh install would each generate and register their own key — and the loser's assertions would then be checked against the winner's key. A 401 that looks like a broken signature and is really a race in the client. `AppAttestSigner` is an actor holding a single in-flight registration `Task`; the second caller awaits the first rather than starting its own.

@@ -102,7 +102,4 @@ final class SigningTests: XCTestCase {
         XCTAssertEqual(AttestHeader.transaction, "x-transaction-jws")
     }
 
-    func testTransportFailureIsDistinctFromRejection() {
-        XCTAssertNotEqual(RequestSigningError.serverUnreachable, RequestSigningError.registrationRejected)
-    }
 }

@@ -1,8 +1,8 @@
 # AppAttestClient
 
 [![CI](https://github.com/Staberman/app-attest-client/actions/workflows/ci.yml/badge.svg)](https://github.com/Staberman/app-attest-client/actions/workflows/ci.yml)
-[![Swift 5.9](https://img.shields.io/badge/Swift-5.9+-F05138?style=flat-square&logo=swift&logoColor=white)](https://swift.org)
-[![Platforms](https://img.shields.io/badge/iOS%2015%20%7C%20tvOS%2015%20%7C%20visionOS%201-1B1B1B?style=flat-square)](#requirements)
+[![Swift versions](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FStaberman%2Fapp-attest-client%2Fbadge%3Ftype%3Dswift-versions&style=flat-square)](https://swiftpackageindex.com/Staberman/app-attest-client)
+[![Platforms](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FStaberman%2Fapp-attest-client%2Fbadge%3Ftype%3Dplatforms&style=flat-square)](https://swiftpackageindex.com/Staberman/app-attest-client)
 
 Sign your app's requests with a Secure Enclave key, so the server can tell a genuine copy of your app from a script with a copied API token.
 
